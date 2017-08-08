@@ -12,7 +12,7 @@ public class SortierenHaupt {
 		}
 		
 		char[] neuekette = {'E','F','A','C','H','B','G','D'};
-		char[] insortiert = Sortiermethoden.tauscheWerte(6, 1, neuekette);
+		char[] insortiert = Sortiermethoden.selectionssort(neuekette);
 		System.out.println(" ");
 		System.out.print("Selectionsort: ");
 		

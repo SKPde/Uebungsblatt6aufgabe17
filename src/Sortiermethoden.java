@@ -36,11 +36,7 @@ public class Sortiermethoden {
 		
 		for(int count = 0; count < zeichenkette.length-1; count++) {
 			minimumindex = Sortiermethoden.minimum(count, zeichenkette.length-1, ausgabe);
-			//System.out.println(minimumindex);
-			System.arraycopy(zeichenkette, minimumindex, ausgabe, count , 1);
-			System.arraycopy(zeichenkette, count, ausgabe, minimumindex, 1);
-			//System.arraycopy(zeichenkette, 0, ausgabe, 0, ausgabe.length-1);
-			//System.out.println(ausgabe);
+			ausgabe = Sortiermethoden.tauscheWerte(count, minimumindex, ausgabe);
 		}
 
 		return ausgabe;
