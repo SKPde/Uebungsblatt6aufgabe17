@@ -17,16 +17,16 @@ public class SchnellSort {
         int pivot = vonunten + (vonoben - vonunten) / 2;
 
         while (i <= j) {
-            while  (buchstabenkette[i] > buchstabenkette[pivot]) {
+            while (buchstabenkette[i] > buchstabenkette[pivot] && i < pivot) {
                 i++;
             }
 
-            while (buchstabenkette[j] < buchstabenkette[pivot]) {
+            while (buchstabenkette[j] < buchstabenkette[pivot] && j > pivot) {
                 j--;
             }
 
             if (i <= j) {
-                Sortiermethoden.tauscheWerte(j, i, buchstabenkette);
+                buchstabenkette = Sortiermethoden.tauscheWerte(j, i, buchstabenkette);
                 i++;
                 j--;
             }
