@@ -2,10 +2,42 @@
 public class SchnellSort {
 
 	private static char[] buchstabenkette;
-	private static int lange;
-
+	
 	public static char[] sortieren(char[] zeichenkette) {
-
-		return ausgabe;
+		buchstabenkette = new char[zeichenkette.length];
+		System.arraycopy(zeichenkette, 0, buchstabenkette, 0, zeichenkette.length);
+		schnellsortierung(0, (zeichenkette.length-1));
+		return buchstabenkette;
 	}
-}
+	
+	private static void schnellsortierung(int vonunten, int vonoben) {
+		
+        int i = vonunten;
+        int j = vonoben;
+        int pivot = vonunten + (vonoben - vonunten) / 2;
+
+        while (i <= j) {
+            while  (buchstabenkette[i] > buchstabenkette[pivot]) {
+                i++;
+            }
+
+            while (buchstabenkette[j] < buchstabenkette[pivot]) {
+                j--;
+            }
+
+            if (i <= j) {
+                Sortiermethoden.tauscheWerte(j, i, buchstabenkette);
+                i++;
+                j--;
+            }
+        }
+        //call quickSort recursively
+        if (vonunten < j) {
+            schnellsortierung(vonunten, j);
+        }
+        if (i < vonoben) {
+            schnellsortierung(i, vonoben);
+        }
+    }
+	}
+
