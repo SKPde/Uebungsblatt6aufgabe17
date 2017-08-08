@@ -21,17 +21,29 @@ public class Sortiermethoden {
 					System.arraycopy(zeichenkette, x, ausgabe, x, 1);
 				}
 				System.arraycopy(ausgabe, 0, zeichenkette, 0, zeichenkette.length);
-				//System.out.println(ausgabe);
+				// System.out.println(ausgabe);
 			}
 			templange--;
 		}
-		
+
 		return ausgabe;
 	}
 
 	public static char[] selectionssort(char[] zeichenkette) {
+		char[] ausgabe = new char[zeichenkette.length];
+		System.arraycopy(zeichenkette, 0, ausgabe, 0, zeichenkette.length);
+		int beginn = 0;
 
-		return null;
+		while (beginn < zeichenkette.length) {
+
+			for (int x = beginn; x < zeichenkette.length; x++) {
+
+			}
+
+			beginn++;
+
+		}
+		return ausgabe;
 	}
 
 }

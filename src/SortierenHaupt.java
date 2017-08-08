@@ -11,9 +11,10 @@ public class SortierenHaupt {
 			System.out.print(sortiert[x]);
 		}
 		
-		char[] insortiert = Sortiermethoden.selectionssort(kette);
+		char[] neuekette = {'E','F','A','C','H','B','G','D'};
+		char[] insortiert = Sortiermethoden.selectionssort(neuekette);
 		System.out.println(" ");
-		System.out.println("Selectionsort: ");
+		System.out.print("Selectionsort: ");
 		for(int x = 0; x < insortiert.length; x++) {
 			System.out.print(insortiert[x]);
 		}
