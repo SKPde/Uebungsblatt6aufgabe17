@@ -31,13 +31,13 @@ public class Quicksort {
 		System.arraycopy(zeichenkette, 0, ausgabe, 0, zeichenkette.length);
 		int piviot2 = getPiviot(unten, oben);
 		int templi = 0;
-		int tempre = piviot2 + 1;
+		int tempre = zeichenkette.length-1;
 
 		while (ausgabe[templi] < ausgabe[piviot2] && templi < piviot2) {
 			templi++;
 		}
-		while (ausgabe[tempre] > ausgabe[piviot2] && tempre < oben) {
-			tempre++;
+		while (ausgabe[tempre] > ausgabe[piviot2] && tempre > piviot2) {
+			tempre--;
 		}
 
 		if (ausgabe[templi] > ausgabe[piviot2] && ausgabe[tempre] < ausgabe[piviot2]) {
