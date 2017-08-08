@@ -20,7 +20,12 @@ public class SortierenHaupt {
 		System.out.println(" ");
 		
 		char[] schnellekette = {'H', 'G', 'F', 'D', 'E', 'C', 'B', 'A'};
+		//int count = 0;
+		//while(count < Quicksort.getPiviot(0, schnellekette.length-1)) {
 		schnellekette = Quicksort.quicksort(schnellekette);
+		//count++;
+		//}
+		
 		System.out.print("Quicksort: ");
 		System.out.print(schnellekette);
 		
