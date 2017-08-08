@@ -32,23 +32,26 @@ public class Sortiermethoden {
 	public static char[] selectionssort(char[] zeichenkette) {
 		char[] ausgabe = new char[zeichenkette.length];
 		System.arraycopy(zeichenkette, 0, ausgabe, 0, zeichenkette.length);
-		
-		int beginn = 1;
-		char minimum = zeichenkette[0];
-		int tempindex = 0;
-		
-		for(int x = beginn; x < zeichenkette.length; x++) {
-			if(zeichenkette[x] < minimum) {
-				minimum = zeichenkette[x];
-				tempindex = x;
+
+		String test = String.valueOf(zeichenkette[2]);
+
+		System.out.println(test);
+
+		return ausgabe;
+	}
+
+	public static int minimum(int von, int bis, char[] eingang) {
+		int minimum = von;
+		char kleinstes = eingang[von];
+
+		for (int x = von + 1; x <= bis; x++) {
+			if (eingang[x] < kleinstes) {
+				kleinstes = eingang[x];
+				minimum = x;
 			}
 		}
-		
-		System.arraycopy(zeichenkette, 0, ausgabe, 0, zeichenkette.length);
-		ausgabe[beginn-1] = minimum;
-		ausgabe[tempindex] = zeichenkette[beginn-1];
-		
-		return ausgabe;
+
+		return minimum;
 	}
 
 }

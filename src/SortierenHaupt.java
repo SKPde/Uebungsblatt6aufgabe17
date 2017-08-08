@@ -18,6 +18,7 @@ public class SortierenHaupt {
 		for(int x = 0; x < insortiert.length; x++) {
 			System.out.print(insortiert[x]);
 		}
+		System.out.println(Sortiermethoden.minimum(3,7, neuekette));
 	}
 
 }
