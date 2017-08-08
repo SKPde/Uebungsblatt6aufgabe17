@@ -32,17 +32,22 @@ public class Sortiermethoden {
 	public static char[] selectionssort(char[] zeichenkette) {
 		char[] ausgabe = new char[zeichenkette.length];
 		System.arraycopy(zeichenkette, 0, ausgabe, 0, zeichenkette.length);
-		int beginn = 0;
-
-		while (beginn < zeichenkette.length) {
-
-			for (int x = beginn; x < zeichenkette.length; x++) {
-
+		
+		int beginn = 1;
+		char minimum = zeichenkette[0];
+		int tempindex = 0;
+		
+		for(int x = beginn; x < zeichenkette.length; x++) {
+			if(zeichenkette[x] < minimum) {
+				minimum = zeichenkette[x];
+				tempindex = x;
 			}
-
-			beginn++;
-
 		}
+		
+		System.arraycopy(zeichenkette, 0, ausgabe, 0, zeichenkette.length);
+		ausgabe[beginn-1] = minimum;
+		ausgabe[tempindex] = zeichenkette[beginn-1];
+		
 		return ausgabe;
 	}
 
