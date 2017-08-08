@@ -17,11 +17,13 @@ public class SortierenHaupt {
 		System.out.print("Selectionsort: ");
 		
 		System.out.println(insortiert);
+		System.out.println(" ");
 		
-		/*for(int x = 0; x < insortiert.length; x++) {
-			System.out.print(insortiert[x]);
-		}*/
-		//System.out.println(Sortiermethoden.minimum(3,7, neuekette));
+		char[] schnellekette = {'H', 'G', 'F', 'D', 'E', 'C', 'B', 'A'};
+		schnellekette = Quicksort.quicksort(schnellekette);
+		System.out.print("Quicksort: ");
+		System.out.print(schnellekette);
+		
 	}
 
 }
