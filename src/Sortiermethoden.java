@@ -21,6 +21,7 @@ public class Sortiermethoden {
 					System.arraycopy(zeichenkette, x, ausgabe, x, 1);
 				}
 				System.arraycopy(ausgabe, 0, zeichenkette, 0, zeichenkette.length);
+				//System.out.println(ausgabe);
 			}
 			templange--;
 		}

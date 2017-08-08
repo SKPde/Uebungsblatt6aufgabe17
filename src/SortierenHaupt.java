@@ -10,6 +10,13 @@ public class SortierenHaupt {
 		for(int x = 0; x < sortiert.length; x++) {
 			System.out.print(sortiert[x]);
 		}
+		
+		char[] insortiert = Sortiermethoden.selectionssort(kette);
+		System.out.println(" ");
+		System.out.println("Selectionsort: ");
+		for(int x = 0; x < insortiert.length; x++) {
+			System.out.print(insortiert[x]);
+		}
 	}
 
 }
