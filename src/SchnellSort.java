@@ -17,11 +17,11 @@ public class SchnellSort {
         int pivot = vonunten + (vonoben - vonunten) / 2;
 
         while (i <= j) {
-            while (buchstabenkette[i] > buchstabenkette[pivot] && i < pivot) {
+            while (buchstabenkette[i] < buchstabenkette[pivot] && i < pivot) {
                 i++;
             }
 
-            while (buchstabenkette[j] < buchstabenkette[pivot] && j > pivot) {
+            while (buchstabenkette[j] > buchstabenkette[pivot] && j > pivot) {
                 j--;
             }
 
