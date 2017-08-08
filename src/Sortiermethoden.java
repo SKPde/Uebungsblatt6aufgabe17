@@ -32,10 +32,16 @@ public class Sortiermethoden {
 	public static char[] selectionssort(char[] zeichenkette) {
 		char[] ausgabe = new char[zeichenkette.length];
 		System.arraycopy(zeichenkette, 0, ausgabe, 0, zeichenkette.length);
-
-		String test = String.valueOf(zeichenkette[2]);
-
-		System.out.println(test);
+		int minimumindex = 0;
+		
+		for(int count = 0; count < zeichenkette.length-1; count++) {
+			minimumindex = Sortiermethoden.minimum(count, zeichenkette.length-1, ausgabe);
+			//System.out.println(minimumindex);
+			System.arraycopy(zeichenkette, minimumindex, ausgabe, count , 1);
+			System.arraycopy(zeichenkette, count, ausgabe, minimumindex, 1);
+			//System.arraycopy(zeichenkette, 0, ausgabe, 0, ausgabe.length-1);
+			//System.out.println(ausgabe);
+		}
 
 		return ausgabe;
 	}
@@ -52,6 +58,19 @@ public class Sortiermethoden {
 		}
 
 		return minimum;
+	}
+	
+	public static char[] tauscheWerte(int pos1, int pos2, char[] zeichenkette) {
+		char[] ausgabe = new char[zeichenkette.length]; 
+		System.arraycopy(zeichenkette, 0, ausgabe, 0, zeichenkette.length);
+		char[] temp = new char[zeichenkette.length];
+		System.arraycopy(zeichenkette, 0, temp, 0, zeichenkette.length);
+		
+		System.arraycopy(temp, pos1, ausgabe, pos2, 1);
+		System.arraycopy(zeichenkette, pos2, ausgabe, pos1, 1);
+
+		
+		return ausgabe;
 	}
 
 }

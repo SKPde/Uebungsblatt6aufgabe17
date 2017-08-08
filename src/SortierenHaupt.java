@@ -12,13 +12,16 @@ public class SortierenHaupt {
 		}
 		
 		char[] neuekette = {'E','F','A','C','H','B','G','D'};
-		char[] insortiert = Sortiermethoden.selectionssort(neuekette);
+		char[] insortiert = Sortiermethoden.tauscheWerte(6, 1, neuekette);
 		System.out.println(" ");
 		System.out.print("Selectionsort: ");
-		for(int x = 0; x < insortiert.length; x++) {
+		
+		System.out.println(insortiert);
+		
+		/*for(int x = 0; x < insortiert.length; x++) {
 			System.out.print(insortiert[x]);
-		}
-		System.out.println(Sortiermethoden.minimum(3,7, neuekette));
+		}*/
+		//System.out.println(Sortiermethoden.minimum(3,7, neuekette));
 	}
 
 }
